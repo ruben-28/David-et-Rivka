@@ -8,6 +8,14 @@
     font-weight: 400;
     font-style: normal;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    direction: ltr;
+    text-align: left;
+    margin: 0;
+    /* background-image: url('../pictures/s-l1600.jpg'); */
+}
   
 #overlay {
     position: fixed;
@@ -16,33 +24,34 @@
     width: 100%;
     height: 100%;
     /* Utilise 'background' au lieu de 'background-color' pour appliquer un dégradé */
-    background: linear-gradient(rgba(81, 99, 85, 1), rgba(195, 204, 183, 1));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-image:  url("../pictures/OverlayLandscape.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
     z-index: 10000; /* Assure-toi que le z-index est suffisamment élevé */
 }
 
-.logo {
-    width: 50%;
-    height: 50%;
-    margin-bottom: 20px;
+
+#overlay a {
+    position: absolute; /* Change "relative" to "absolute" for positioning relative to the overlay */
+    bottom: 2em; /* Set the distance from the bottom to 2em */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%); /* Adjust for the centering */
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #A47F4A;
+    border: 3px solid #A47F4A;
+    padding: 0.5em 1.2em;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    border-radius: 10px;
 }
 
-.logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 
-body {
-    font-family: Arial, sans-serif;
-    direction: ltr;
-    text-align: left;
-    /* background-image: url('../pictures/s-l1600.jpg'); */
-}
+
+
 
 header {
     display: flex;
@@ -82,15 +91,15 @@ option[value="he"] {
 }
 
 .houppaPic{
-    width: 100%;
     height: 100%;
-    object-fit: cover;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
 }
 
 .houppaPic img {
-    width: 100%;
     height: 100%;
-    object-fit: cover;
+    width: 100%;
 }
 
 
@@ -105,6 +114,7 @@ option[value="he"] {
     margin: 10px;
     height: 80vh; /* Ajuste la hauteur de la div */
     gap: 2rem; /* Réduit l'espace entre les éléments dans la div */
+    box-shadow: #617968;
 }
 
 .text-container {
@@ -159,7 +169,10 @@ option[value="he"] {
 
 
 .houppa {
-    background-color: #E5E5DC; /* Fond gris clair doux, en harmonie avec le Save The Date et RSVP */
+    background-image: url("../pictures/bacgroundCard.jpg");
+    background-size: cover; /* Remplit toute la zone, mais peut rogner un peu l'image */
+    background-position: top center; /* Positionne l'image au centre en se concentrant sur le haut */
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -167,15 +180,48 @@ option[value="he"] {
     gap: 1.5em;
     min-height: 100vh;
     padding: 30px;
-    text-align: center; /* Alignement du texte au centre */
-    font-family: 'Baguet Script', cursive; /* Police scriptée douce */
-    color: #617968; /* Texte principal accordé avec Save The Date */
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    line-height: 1.5;
+    color: #617968;
 }
+
+.banner{
+    width: 100%;
+
+}
+
+.banner img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.bsd-container {
+    position: relative; /* Position relative pour le conteneur parent */
+    width: 100%; /* La largeur du conteneur */
+    height: 100%; /* La hauteur du conteneur */
+}
+
+.bsd {
+    position: absolute; /* Positionnement absolu à l'intérieur du conteneur parent */
+    top: 0; /* Positionne l'élément en haut */
+    right: 0; /* Positionne l'élément à droite */
+    margin: 10px; /* Ajoute un petit espacement par rapport aux bords */
+    font-size: 1.5rem; /* Taille du texte */
+    font-family: Arial, sans-serif;
+    text-align: right; /* Aligne le texte à droite */
+}
+
+
+
+
 
 .text-wrapperHouppa {
     font-size: 2rem;
     color: #617968; /* Utilisation de la même couleur que pour la section RSVP */
-    font-family: 'Baguet Script', cursive; /* Police scriptée douce */
     margin-bottom: 20px;
 }
 
@@ -394,4 +440,179 @@ button:hover {
 button:active {
     transform: translateY(1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Styles généraux pour mobile */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 1rem; /* Réduire la taille de la police pour mobile */
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Empêche le débordement horizontal */
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+
+    select {
+        font-size: 14px;
+        padding: 4px;
+    }
+
+    #overlay {
+        background-image: url("../pictures/Overlay.jpg");
+        max-width: 100%;
+    }
+
+    #overlay a {
+        font-size: 2rem; /* Réduire la taille du texte pour mobile */
+        padding: 0.5em 1em; /* Ajuster l'espacement du bouton */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        left: 50%; /* Center the button horizontally */
+        bottom: 30%; /* Set the distance from the bottom */
+        transform: translate(-50%, 50%); /* Center the button perfectly both horizontally and vertically */
+    }
+
+    .houppa {
+        padding: 20px;
+        gap: 1em;
+        text-align: center;
+        width: 100vw; /* Assure que la section prend bien toute la largeur de l'écran */
+        max-width: 100%;
+        margin: 0; /* Supprime les marges */
+    }
+
+    .houppaPic {
+        height: 80vh; /* Utilise 80% de la hauteur de la fenêtre */
+        width: 100vw; /* Prend toute la largeur de la fenêtre */
+        max-width: 100vw;
+        margin: 0; /* Supprime toute marge */
+        padding: 0; /* Supprime tout padding */
+        overflow: hidden; /* Supprime tout débordement */
+    }
+    
+    .houppaPic img {
+        height: 100%; /* Remplit toute la hauteur de l'élément parent */
+        width: 100vw; /* Assure que l'image prend toute la largeur */
+        object-fit: cover; /* Garde les proportions tout en remplissant l'espace */
+        margin: 0; /* Supprime toute marge */
+        padding: 0; /* Supprime tout padding */
+    }
+    
+
+    .countdown {
+        margin: 0; /* Supprime les marges à droite */
+        height: 50vh; /* Réduire la hauteur pour mobile */
+        gap: 1rem;
+        padding: 10px;
+        width: 100vw; /* Assure que la section prend bien toute la largeur de l'écran */
+        overflow: hidden; /* Supprime tout débordement horizontal */
+    }
+
+    .text-container {
+        font-size: 2rem; /* Ajustement de la taille de la police pour mobile */
+    }
+
+    .timer {
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 5px;
+    }
+
+    .tag .value {
+        font-size: 2em; /* Réduire la taille pour mobile */
+    }
+
+    .tag .label {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.5em 1.5em;
+        font-size: 1.2rem; /* Taille plus petite pour les boutons */
+    }
+
+    .bsd {
+        font-size: 1.2rem; /* Adapter la taille du texte */
+        margin: 5px;
+    }
+
+    .noms {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .nomFemme, .nomHomme, .and {
+        font-size: 2.5rem; /* Réduire la taille de la police des noms des parents */
+    }
+
+    /* Section RSVP */
+    .RSVP {
+        padding: 10px;
+        gap: 0.5em;
+        width: 100vw; /* S'assure que toute la section occupe bien la largeur de l'écran */
+        margin: 0; /* Supprime les marges à droite */
+        overflow: hidden; /* Empêche le débordement horizontal */
+    }
+
+    .RSVP h2, .RSVP h3 {
+        font-size: 2rem;
+    }
+
+    #RSVPform {
+        max-width: 90%; /* Réduit légèrement la largeur du formulaire */
+        padding: 0.5em;
+    }
+
+    input[type="text"], input[type="number"], textarea {
+        font-size: 1rem;
+        padding: 8px; /* Réduit légèrement l'espacement intérieur des champs */
+    }
+
+    .checkBoxField {
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+    }
+
+    .checkbox-wrapper label {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+    }
+
+    button:hover {
+        transform: translateY(-2px);
+    }
+
+    button:active {
+        transform: translateY(0px);
+    }
+
+    /* Réduire la police du texte de la houppa */
+    .text-wrapperHouppa {
+        font-size: 1rem; /* Réduction de la taille de la police pour la houppa */
+    }
+
+    /* Ajuster la taille du texte des noms des parents */
+    .Betito, .nahum {
+        font-size: 1rem; /* Taille ajustée pour mobile */
+        width: 100%;
+        padding: 5%;
+    }
+
+    .nahum {
+        padding-left: 12%;
+    }
 }

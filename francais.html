@@ -19,20 +19,22 @@
 <body>
 
     <div id="overlay">
-        <div class="logo">
-            <img src="pictures/logo.png" alt="logo">
-        </div>
-        <a class="btnLink" onclick="hideOverlay();">Voir l'invitation</a>
+       
+        <a class="btnLink" onclick="hideOverlay(); playMusic();">Voir l'invitation</a>
     </div>
+
+    <audio id="myAudio" src="audios/mehera.mp3" type="audio/mp3"></audio>
 
     <select id="language-select">
         <option value="fr" data-flag="france.png" selected>🇫🇷 Français</option>
         <option value="he" data-flag="israel.png">🇮🇱 עברית</option>
     </select>
 
+ 
     <div class="houppaPic">
-        <img src="pictures/houppa.jpg" alt="houppa">
+        <img src="pictures/houppaa.jpg" alt="houppa">
     </div>
+
 
     <div class="countdown">
         <div class="text-container">
@@ -61,12 +63,26 @@
     </div>
 
     <div class="houppa">
+
+        <div class="bsd-container">
+            <div class="bsd">
+                <p>בס"ד</p>
+            </div>
+            
+        </div>
+        
+
+        <div class="banner">
+            <img src="pictures/kol_Sasson.png" alt="banner">
+        </div>
+
+
         <div class="nomParents">
             <div class="Betito">
                 <p>M et Mme Betito Jacques</p>
             </div>
             <div class="nahum">
-                <p>Mme Koskas Michelle<br>
+                <p>Mme Koskas Michèle<br>
                 Mme Nahum Yola<br>
                 M et Mme Nahum Roger</p>
             </div>
@@ -80,7 +96,7 @@
 
         <div class="noms">
             <div class="nomFemme">
-                <p>Rivka Eva Meirav</p>
+                <p>Rivka Eva Merav</p>
             </div>
             <div class="and">
                 <p>&</p>
@@ -92,11 +108,11 @@
 
         <div class="text-wrapperHouppa">
             <p class="txtHouppa">
-                et vous prient de les honorer de votre présence à la Houppa qui sera célébrée בע"ה<br>
-                le Mercredi 27 Novembre 2024<br>
-                le 26 Heshvan 5785 à 18h30 précise<br>
+                et vous prient de les honorer de votre présence à la Houppa qui sera célébrée בעז"ה<br>
+                le Mercredi 27 Novembre 2024,<br>
+                26 Heshvan 5785 à 18h30 précises<br>
                 dans les sallons "Sakoya", Ma'ale HaHamisha <br>
-                La Houppa sera suivie de la reception<br>
+                La Houppa sera suivie de la réception<br>
             </p>
         </div>
 
@@ -165,5 +181,7 @@
     <script src="js/translate.js"></script>
     <script src="js/hideOverlay.js"></script>
     <script src="js/sheet.js"></script>
+    <script src="js/checkBoxesLogic.js"></script>
+    <script src="js/playMusic.js"></script>
 </body>
 </html>
