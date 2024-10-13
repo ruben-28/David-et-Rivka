@@ -2,7 +2,7 @@ document.getElementById('language-select').addEventListener('change', function (
     const selectedLang = this.value;
 
     if (selectedLang === 'fr') {
-        window.location.href = 'francais.html'; // Redirige vers la page en français
+        window.location.href = 'index.html'; // Redirige vers la page en français
     } else if (selectedLang === 'he') {
         window.location.href = 'hebreu.html'; // Redirige vers la page en hébreu
     }
