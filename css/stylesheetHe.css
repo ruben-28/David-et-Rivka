@@ -1,0 +1,431 @@
+@font-face {
+    font-family: 'Baguet Script';
+    src: url("fonts/Baguet Script.otf");
+}
+
+.great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    direction: ltr;
+    text-align: left;
+    margin: 0;
+    /* background-image: url('../pictures/s-l1600.jpg'); */
+}
+
+  
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Utilise 'background' au lieu de 'background-color' pour appliquer un dégradé */
+    background-image:  url("../pictures/OverlayLandscape.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    z-index: 10000; /* Assure-toi que le z-index est suffisamment élevé */
+}
+
+
+#overlay a {
+    position: absolute; /* Change "relative" to "absolute" for positioning relative to the overlay */
+    bottom: 2em; /* Set the distance from the bottom to 2em */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%); /* Adjust for the centering */
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #A47F4A;
+    border: 3px solid #A47F4A;
+    padding: 0.5em 1.2em;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    border-radius: 10px;
+}
+
+
+
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+select {
+    padding: 5px;
+    font-size: 16px;
+    position: fixed;
+}
+
+main {
+    margin: 50px;
+    text-align: center;
+}
+
+[lang="he"] body {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Ajoute un style pour le menu déroulant afin de s'assurer que les icônes sont bien visibles */
+option {
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+option[value="fr"] {
+    background-image: url('france.png');
+}
+
+option[value="he"] {
+    background-image: url('israel.png');
+}
+
+.houppaPic{
+    height: 100%;
+    width: 100%;
+}
+
+.houppaPic img {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Styles du compte à rebours adaptés */
+.countdown {
+    background-color: #F2F2F2; /*617968 */
+
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    height: 100vh;
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.text-container {
+    text-align: center;
+    margin-bottom: 2em;
+    color: #E5C393; /* Couleur dorée pour le texte */
+    font-weight: bold;
+    font-size: 50px;
+    font-family: "Great Vibes", cursive;
+}
+
+.timer {
+    background-color: rgba(255, 255, 255, 0.1);
+    background-size:contain;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 110px;
+    gap: 5%; /* Espace entre les éléments */
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espace entre la valeur et le label */
+}
+
+.tag .value {
+    font-size: 4em;
+    font-family: 'Great Vibes', cursive; /* Police élégante */
+    color: #617968; /* Texte gris foncé */
+}
+
+.tag .label {
+    font-size: 1.5em;
+    color: #84A48D; /* Labels en gris moyen */
+}
+
+
+
+.btnLink {
+    display: inline-block;
+    white-space: nowrap;
+    justify-content: center;
+    font-size: 3rem;
+    color: whitesmoke;
+    border: 5px solid whitesmoke;
+    padding: 0.5em 1.2em;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    border-radius: 5px;
+}
+
+
+.houppa {
+    /*background-color: #E5E5DC; /* Fond gris clair doux, en harmonie avec le Save The Date et RSVP */
+    background-image: url("../pictures/bacgroundCard.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    min-height: 100vh;
+    padding: 30px;
+    text-align: center; /* Alignement du texte au centre */
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #617968; /* Texte principal accordé avec Save The Date */
+}
+
+.bsd-container {
+    position: relative; /* Position relative pour le conteneur parent */
+    width: 100%; /* La largeur du conteneur */
+    height: 100%; /* La hauteur du conteneur */
+}
+
+.bsd {
+    position: absolute; /* Positionnement absolu à l'intérieur du conteneur parent */
+    top: 0; /* Positionne l'élément en haut */
+    right: 0; /* Positionne l'élément à droite */
+    margin: 10px; /* Ajoute un petit espacement par rapport aux bords */
+    font-size: 1.5rem; /* Taille du texte */
+    font-family: Arial, sans-serif;
+    text-align: right; /* Aligne le texte à droite */
+    direction: rtl; /* Texte de droite à gauche pour l'hébreu */
+}
+
+
+
+.text-wrapperHouppa {
+    font-size: 2rem;
+    color: #617968; /* Utilisation de la même couleur que pour la section RSVP */
+    margin-bottom: 20px;
+}
+
+.nomParents {
+    display: flex;
+    justify-content: space-between; /* Garde chaque groupe de noms sur un côté de l'écran */
+    align-items: flex-start; /* Alignement vertical en haut */
+    width: 100%;
+    max-width: 1200px; /* Limite la largeur totale de la section */
+    padding: 30px;
+}
+
+.Betito, .nahum {
+    width: 45%; /* Pour que chaque section prenne environ 45% de la largeur */
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8rem;
+    color: #617968; /* Accordé au texte principal du Save The Date */
+}
+
+.Betito {
+    text-align: right; /* Alignement à gauche */
+}
+
+.nahum {
+    text-align: right; /* Alignement à gauche pour que tous les noms commencent au même endroit */
+    padding-right: 50%; /* Ajout d'un espace sur la gauche pour créer une distance par rapport au bord */
+}
+
+.noms {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
+    align-items: center; /* Centre horizontalement les éléments */
+    justify-content: center; /* Centre verticalement si nécessaire */
+    gap: 0; /* Pas d'espace entre chaque ligne */
+}
+
+.nomFemme, .nomHomme, .and {
+    font-family: 'Great Vibes', cursive; /* Police élégante */
+    color: #BF8A3D; /* Vert moyen en harmonie avec les autres sections */
+    margin: 0; /* Aucune marge pour minimiser l'espacement */
+    line-height: 0.5; /* Hauteur de ligne très réduite pour minimiser l'espacement vertical */
+}
+
+.nomFemme, .nomHomme {
+    font-size: 4rem; /* Taille des noms */
+}
+
+.and {
+    font-size: 4rem; /* Taille légèrement plus grande pour "&" */
+    color: #BF8A3D; /* Doré subtil pour un point focal */
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.7em 2em; /* Espace intérieur du bouton */
+    margin-top: 1.5em; /* Espacement supérieur */
+    border: 2px solid #87693a; /* Bordure dorée foncée */
+    background-color: #cd9f5b; /* Fond vert/gris accordé avec le reste */
+    color: #ffffff; /* Texte blanc */
+    text-decoration: none; /* Retire le soulignement du texte */
+    font-size: 1.5rem; /* Taille de la police */
+    font-weight: bold; /* Met le texte en gras */
+    font-family: 'Dancing Script', cursive; /* Police élégante */
+    border-radius: 30px; /* Coins arrondis pour un effet élégant */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Transitions pour un effet de survol doux */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Ombre pour donner un léger relief */
+    cursor: pointer; /* Change le curseur pour montrer que c'est cliquable */
+}
+
+.btn:hover {
+    background-color: #ddb06b; /* Changement de couleur de fond au survol pour correspondre à la section RSVP */
+    color: #ffffff; /* Texte blanc inchangé au survol */
+    transform: translateY(-3px); /* Léger mouvement vers le haut au survol */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Accentue l'ombre au survol */
+}
+
+.btn:active {
+    transform: translateY(1px); /* Mouvement léger vers le bas lorsque cliqué */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Réduit l'ombre lors du clic */
+}
+
+
+
+
+/* Section RSVP */
+.RSVP {
+    background-color: #F2F2F2; /* Fond gris très clair */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.RSVP h2, .RSVP h3 {
+    font-size: 3rem;
+    color: #617968; /* Couleur dorée du deuxième code */
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    margin: 0;
+}
+
+#RSVPform {
+    width: 100%;
+    max-width: 600px; /* Limite la largeur du formulaire pour qu'il reste centré et bien structuré */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+input[type="text"], input[type="number"], textarea {
+    margin-bottom: 1em;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #84A48D; /* Bordure assortie à la couleur dorée */
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: #FFF;
+    color: #617968; /* Texte en gris foncé */
+}
+
+/* Checkbox Field Styles */
+.checkBoxField {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligne les checkboxes à gauche */
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.checkbox-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    appearance: none;
+    background-color: #FFF;
+    border: 2px solid #84A48D;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked {
+    background-color: #617968; /* La couleur de la case cochée */
+    border-color: #617968;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked::after {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #FFF;
+    font-size: 16px;
+    animation: checkboxScale 0.3s ease forwards; /* Animation de l'icône cochée */
+}
+
+.checkbox-wrapper label {
+    font-size: 1.2rem;
+    color: #84A48D; /* Texte doré */
+    cursor: pointer;
+    margin-left: 10px;
+    text-align: left;
+}
+
+/* Animation pour l'effet de coche */
+@keyframes checkboxScale {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Styles du bouton Envoyer */
+.btnField {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 15px 30px;
+    background-color: #617968; /* Bouton gris foncé */
+    color: #FFF;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #84A48D; /* Couleur dorée plus claire au survol */
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}

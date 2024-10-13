@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesheetHe.css">
+    <title>דוד & רבקה</title>
+
+    <!-- Google Fonts - Great Vibes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   </head>
+</head>
+<body>
+    <div id="overlay">
+
+        <a class="btnLink" onclick="hideOverlay();">לצפות בהזמנה</a>
+    </div>
+
+
+    <select id="language-select">
+        <option value="fr" data-flag="france.png">🇫🇷 Français</option>
+        <option value="he" data-flag="israel.png" selected>🇮🇱 עברית</option>
+    </select>
+
+    <audio id="myAudio" src="audios/mehera.mp3" type="audio/mp3"></audio>
+
+
+    <div class="houppaPic">
+        <img src="pictures/houppaa.jpg" alt="houppa">
+    </div>
+
+
+    <div class="countdown">
+        <div class="text-container">
+            <h2 id="svd">Save  The  Date</h2>
+            <p id="date">יום רביעי  27  נובמבר 2024</p>
+        </div>
+        <div class="timer" id="timer">
+            <div class='tag'>
+                <span class='value'>-</span> 
+                <span class='label'>Days</span>
+            </div>
+            <div class='tag'>
+                <span class='value'>-</span>  
+                <span class='label'>Hours</span>
+            </div>
+            <div class='tag'>
+                <span class='value'>-</span> 
+                <span class='label'>Minutes</span>  
+            </div>
+            <div class='tag'>
+                <span class='value'>-</span> 
+                <span class='label'>Seconds</span>   
+            </div>
+        </div>
+    </div>
+
+
+    <div class="houppa">
+
+        <div class="bsd-container">
+            <div class="bsd">
+                <p>בס"ד</p>
+            </div>
+            
+        </div>
+        
+        <div class="banner">
+            <img src="pictures/kol_Sasson.png" alt="banner">
+        </div>
+         
+        
+        <div class="nomParents">
+            <div class="Betito">
+                <p>מר וגברת בטיטו יעקב</p>
+            </div>
+            <div class="nahum">
+                <p>גברת קוסקאס מישל<br>
+                    גברת נחום יולה<br>
+                    מר וגברת נחום רוג׳ר</p>
+            </div>
+        </div>
+        
+
+        <div class="text-wrapperHouppa">
+            <p class="txtHouppa">
+                בשבח והודיה לה' יתברך הננו שמחים <br>
+                להזמינכם לשמחת נישואי ילדינו <br>
+            </p>
+        </div>
+
+        <div class="noms">
+            <div class="nomFemme">
+                <p>רבקה אוה מירב</p>
+            </div>
+            <div class="and">
+                <p>&</p>
+            </div>
+            <div class="nomHomme">
+                <p>דוד חיים</p>
+            </div>
+        </div>
+        
+
+        <div class="text-wrapperHouppa">
+            <p class="txtHouppa">
+                שתתקיים אי״ה <br>
+                ביום רביעי, 27 בנובמבר 2024<br>
+                כ״ו בחשון התשפ״ה<br>
+                בשעה 18:30 באולמי ״סקויה״, מעלה החמישה
+            </p>
+        </div>
+
+        <a href="https://waze.com/ul/hsv8vp04f1" target="_blank" class="btn"><i class="fa-brands fa-waze"></i> ניווט </a>
+
+     
+
+    </div>
+
+
+
+    
+    <div class="RSVP">
+        <div class="header">
+            <h2>אנחנו מחכים לכם</h2>
+            <h3>תשובה מהירה מאוד רצויה</h3>
+        </div>
+    
+        <form id="RSVPform" action="https://script.google.com/macros/s/AKfycbx-hKWtkbF_eJRCnFsB7a4yFQZ-7sJZB1EYyrHUYNwCR9Mt3cb03Lcy-pvLS7QT0RCt/exec" method="post">
+            <div class="responseField">
+                <div class="names">
+                    <input type="text" name="nom" id="nom" placeholder="שם משפחה" required>
+                    <input type="text" name="prenom" id="prenom" placeholder="שם פרטי" required>
+                </div>
+    
+                <div class="checkBoxField">
+                    <div class="checkbox-wrapper">
+                        <span class="checkbox">
+                            <input type="checkbox" id="presence" value="present">
+                            <label for="presence">אני מגיע</label>
+                        </span>
+                    </div>
+                
+                    <div class="checkbox-wrapper">
+                        <span class="checkbox">
+                            <input type="checkbox" id="absence" value="absent">
+                            <label for="absence">לצערי לא אוכל להגיע</label>
+                        </span>
+                    </div>
+                </div>
+    
+                <div class="nbPers">
+                    <input type="number" name="nbAdults" id="nbAdults" placeholder="מספר מבוגרים" required>
+                    <input type="number" name="nbEnfants" id="nbEnfants" placeholder="מספר ילדים" required>
+                </div>
+                <div class="MsgBm">
+                    <label for="msg">הודעה לחתן ולכלה :</label>
+                    <textarea name="msg" id="msg" placeholder="מזל טוב !!!!"></textarea>
+                </div>
+            </div>
+    
+            <div class="btnField">
+                <button type="submit">לשלוח</button>
+            </div>
+        </form>
+    </div>
+    
+    
+
+    <script src="js/countdownHe.js"></script>
+    <script src="js/translate.js"></script>
+    <script src="js/hideOverlay.js"></script>
+    <script src="js/checkBoxesLogic.js"></script>
+    <script src="js/playMusic.js"></script>
+
+</body>
+</html>
