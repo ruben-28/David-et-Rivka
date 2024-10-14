@@ -573,6 +573,9 @@ button:active {
         font-size: 2rem;
     }
 
+    .RSVP h2{
+        margin-top: 0.5em;
+    }
     .RSVP h3 {
         margin-bottom: 1.5em;
     }
