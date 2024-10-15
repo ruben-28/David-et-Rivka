@@ -289,7 +289,7 @@ option[value="he"] {
 .btn {
     display: inline-block;
     padding: 0.7em 2em; /* Espace intérieur du bouton */
-    margin-top: 1.5em; /* Espacement supérieur */
+    margin:  1.5em 0; /* Espacement supérieur */
     border: 2px solid #87693a; /* Bordure dorée foncée */
     background-color: #cd9f5b; /* Fond vert/gris accordé avec le reste */
     color: #ffffff; /* Texte blanc */
@@ -632,7 +632,7 @@ button:active {
     }
 
     .Betito{
-        padding-right: 10%;
+        padding-right: 8%;
     }
 
 
