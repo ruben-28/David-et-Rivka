@@ -619,12 +619,12 @@ button:active {
 
     /* Réduire la police du texte de la houppa */
     .text-wrapperHouppa {
-        font-size: 1rem; /* Réduction de la taille de la police pour la houppa */
+        font-size: 1.5rem; /* Réduction de la taille de la police pour la houppa */
     }
 
     /* Ajuster la taille du texte des noms des parents */
     .Betito, .nahum {
-        font-size: 1rem; /* Taille ajustée pour mobile */
+        font-size: 1.2rem; /* Taille ajustée pour mobile */
         width: 100%;
     }
     .nahum{
@@ -632,7 +632,7 @@ button:active {
     }
 
     .Betito{
-        padding-right: 8%;
+        padding-right: 9%;
     }
 
 
