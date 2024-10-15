@@ -624,7 +624,7 @@ button:active {
 
     /* Ajuster la taille du texte des noms des parents */
     .Betito, .nahum {
-        font-size: 1.2rem; /* Taille ajustée pour mobile */
+        font-size: 1rem; /* Taille ajustée pour mobile */
         width: 100%;
     }
     .nahum{
