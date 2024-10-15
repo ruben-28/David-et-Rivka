@@ -53,11 +53,6 @@ body {
     border-radius: 10px;
 }
 
-
-
-
-
-
 header {
     display: flex;
     justify-content: flex-end;
@@ -231,15 +226,6 @@ option[value="he"] {
     text-align: right; /* Aligne le texte à droite */
     /* border: blue 1px solid; */
 }
-
-
-
-
-
-
-
-
-
 
 .text-wrapperHouppa {
     font-size: 2rem;

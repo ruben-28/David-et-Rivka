@@ -3,6 +3,11 @@
     src: url("fonts/Baguet Script.otf");
 }
 
+@font-face {
+    font-family: 'Guttman';
+    src: url("fonts/Guttman-Aram.ttf");
+}
+
 .great-vibes-regular {
     font-family: "Great Vibes", cursive;
     font-weight: 400;
@@ -17,7 +22,6 @@ body {
     /* background-image: url('../pictures/s-l1600.jpg'); */
 }
 
-  
 #overlay {
     position: fixed;
     top: 0;
@@ -48,9 +52,6 @@ body {
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     border-radius: 10px;
 }
-
-
-
 
 header {
     display: flex;
@@ -94,6 +95,7 @@ option[value="he"] {
 .houppaPic{
     height: 100%;
     width: 100%;
+    margin: 0;
 }
 
 .houppaPic img {
@@ -105,36 +107,32 @@ option[value="he"] {
 /* Styles du compte à rebours adaptés */
 .countdown {
     background-color: #F2F2F2; /*617968 */
-
-    background-position: center;
-    background-size: cover; 
-    background-repeat: no-repeat;
-    height: 100vh;
-    height: 100vh;
-    width: auto;
+    width: 100%;
     display: flex;
-    flex-direction: column; /* Aligne les éléments verticalement */
-    justify-content: center;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement le contenu */
     align-items: center;
     margin: 10px;
+    height: 80vh; /* Ajuste la hauteur de la div */
+    gap: 2rem; /* Réduit l'espace entre les éléments dans la div */
+    box-shadow: #617968;
 }
 
 .text-container {
     text-align: center;
-    margin-bottom: 2em;
     color: #E5C393; /* Couleur dorée pour le texte */
-    font-weight: bold;
     font-size: 50px;
     font-family: "Great Vibes", cursive;
+    margin-bottom: 0; /* Retire la marge inférieure pour minimiser l'espace */
 }
 
 .timer {
-    background-color: rgba(255, 255, 255, 0.1);
-    background-size:contain;
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     width: 100%;
-    margin-top: 110px;
+    margin-top: 10px;
     gap: 5%; /* Espace entre les éléments */
 }
 
@@ -172,22 +170,25 @@ option[value="he"] {
 
 
 .houppa {
-    /*background-color: #E5E5DC; /* Fond gris clair doux, en harmonie avec le Save The Date et RSVP */
     background-image: url("../pictures/bacgroundCard.jpg");
-    background-size: cover;
-    background-position: center;
+    background-size: cover; /* Remplit toute la zone, mais peut rogner un peu l'image */
+    background-position: top center; /* Positionne l'image au centre en se concentrant sur le haut */
     background-repeat: no-repeat;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+
     gap: 1.5em;
     min-height: 100vh;
-    padding: 30px;
-    text-align: center; /* Alignement du texte au centre */
-    font-family:'Times New Roman', Times, serif;
+    padding: 0;
+
+    font-family: 'Times New Roman', Times, serif;
     font-style: italic;
-    color: #617968; /* Texte principal accordé avec Save The Date */
+    line-height: 1.5;
+    color: #617968;
 }
 
 .banner{
@@ -203,20 +204,28 @@ option[value="he"] {
 
 
 .bsd-container {
-    position: relative; /* Position relative pour le conteneur parent */
-    width: 100%; /* La largeur du conteneur */
-    height: 100%; /* La hauteur du conteneur */
+    position: relative; /* Nécessaire pour le positionnement absolu de .bsd */
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* border: red 1px solid; */
 }
 
+
 .bsd {
-    position: absolute; /* Positionnement absolu à l'intérieur du conteneur parent */
-    top: 0; /* Positionne l'élément en haut */
-    right: 0; /* Positionne l'élément à droite */
-    margin: 10px; /* Ajoute un petit espacement par rapport aux bords */
-    font-size: 1.5rem; /* Taille du texte */
-    font-family: Arial, sans-serif;
+    position: relative; /* Positionnement absolu à l'intérieur du conteneur parent */
+    top: 0; /* Positionne l'élément exactement en haut */
+    right: 0; /* Positionne l'élément exactement à droite */
+    margin: 0; /* Supprime toutes les marges */
+    margin-right: 1%;
+    padding: 0; /* Supprime tous les paddings */
+    font-size: 1rem; /* Taille du texte */
+    line-height: normal;
+    font-family:'Guttman';
     text-align: right; /* Aligne le texte à droite */
-    direction: rtl; /* Texte de droite à gauche pour l'hébreu */
+    /* border: blue 1px solid; */
 }
 
 
@@ -229,11 +238,11 @@ option[value="he"] {
 
 .nomParents {
     display: flex;
+    flex-direction: row;
     justify-content: space-between; /* Garde chaque groupe de noms sur un côté de l'écran */
     align-items: flex-start; /* Alignement vertical en haut */
     width: 100%;
     max-width: 1200px; /* Limite la largeur totale de la section */
-    padding: 30px;
 }
 
 .Betito, .nahum {
@@ -245,6 +254,7 @@ option[value="he"] {
 
 .Betito {
     text-align: right; /* Alignement à gauche */
+    padding-right: 5%;
 }
 
 .nahum {
@@ -445,6 +455,7 @@ button:active {
 }
 
 
+
 /* Styles généraux pour mobile */
 @media (max-width: 768px) {
 
@@ -487,7 +498,7 @@ button:active {
 
     .houppa {
         background-size: cover; /* Remplit toute la zone, mais peut rogner un peu l'image */
-        background-position: center; /* Centre l'image */
+        background-position: top center; /* Centre l'image */
         /* padding: 20px; */
         /* gap: 1em; */
         text-align: center;
@@ -497,7 +508,7 @@ button:active {
     }
 
     .houppaPic {
-        width: auto; /* Prend toute la largeur */
+        width: 100%; /* Prend toute la largeur */
         margin: 0; /* Pas de marges */
         padding: 0; /* Pas de padding */
     }
@@ -523,17 +534,16 @@ button:active {
     }
 
     .timer {
-        flex-direction: row;
         gap: 1rem;
         margin-top: 5px;
     }
 
     .tag .value {
-        font-size: 2em; /* Réduire la taille pour mobile */
+        font-size: 1.7em; /* Réduire la taille pour mobile */
     }
 
     .tag .label {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .btn {
@@ -541,10 +551,7 @@ button:active {
         font-size: 1.2rem; /* Taille plus petite pour les boutons */
     }
 
-    .bsd {
-        font-size: 1.2rem; /* Adapter la taille du texte */
-        margin: 5px;
-    }
+ 
 
     .noms {
         flex-direction: column;
@@ -612,17 +619,48 @@ button:active {
 
     /* Réduire la police du texte de la houppa */
     .text-wrapperHouppa {
-        font-size: 1.5rem; /* Réduction de la taille de la police pour la houppa */
+        font-size: 1rem; /* Réduction de la taille de la police pour la houppa */
     }
 
     /* Ajuster la taille du texte des noms des parents */
     .Betito, .nahum {
-        font-size: 1.3rem; /* Taille ajustée pour mobile */
+        font-size: 1rem; /* Taille ajustée pour mobile */
         width: 100%;
-        padding: 5%;
+    }
+    .nahum{
+        padding-right: 26%;
     }
 
-    .nahum {
-        padding-right: 1%;
+    .Betito{
+        padding-right: 10%;
     }
+
+
+}
+
+
+@media (max-width: 425px){
+        /* Ajuster la taille du texte des noms des parents */
+        .Betito, .nahum {
+            font-size: 1rem; /* Taille ajustée pour mobile */
+            width: 100%;
+        }
+    
+        .Betito {
+            padding-right: 8%;
+        }
+}
+
+
+@media (max-width: 320px) {
+
+          /* Ajuster la taille du texte des noms des parents */
+        .Betito, .nahum {
+            font-size: 1rem; /* Taille ajustée pour mobile */
+            width: 100%;
+        }
+    
+        .Betito {
+            padding-right: 8%;
+        }
 }
