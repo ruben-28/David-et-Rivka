@@ -152,6 +152,7 @@ option[value="he"] {
 .tag .label {
     font-size: 1.5em;
     color: #84A48D; /* Labels en gris moyen */
+    font-family: "Great Vibes", cursive;
 }
 
 
@@ -184,6 +185,8 @@ option[value="he"] {
     gap: 1.5em;
     min-height: 100vh;
     padding: 0;
+    margin-top: 0.2em !important;
+    margin-bottom: 0.2em !important;
 
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
