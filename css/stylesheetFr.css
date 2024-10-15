@@ -3,6 +3,11 @@
     src: url("fonts/Baguet Script.otf");
 }
 
+@font-face {
+    font-family: 'Guttman';
+    src: url("fonts/Guttman-Aram.ttf");
+}
+
 .great-vibes-regular {
     font-family: "Great Vibes", cursive;
     font-weight: 400;
@@ -183,7 +188,7 @@ option[value="he"] {
 
     gap: 1.5em;
     min-height: 100vh;
-    padding: 30px;
+    padding: 0;
 
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
@@ -202,22 +207,35 @@ option[value="he"] {
     height: auto;
 }
 
-
 .bsd-container {
-    position: relative; /* Position relative pour le conteneur parent */
-    width: 100%; /* La largeur du conteneur */
-    height: 100%; /* La hauteur du conteneur */
+    position: relative; /* Nécessaire pour le positionnement absolu de .bsd */
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* border: red 1px solid; */
 }
+
 
 .bsd {
-    position: absolute; /* Positionnement absolu à l'intérieur du conteneur parent */
-    top: 0; /* Positionne l'élément en haut */
-    right: 0; /* Positionne l'élément à droite */
-    margin: 10px; /* Ajoute un petit espacement par rapport aux bords */
-    font-size: 1.5rem; /* Taille du texte */
-    font-family: Arial, sans-serif;
+    position: relative; /* Positionnement absolu à l'intérieur du conteneur parent */
+    top: 0; /* Positionne l'élément exactement en haut */
+    right: 0; /* Positionne l'élément exactement à droite */
+    margin: 0; /* Supprime toutes les marges */
+    margin-right: 1%;
+    padding: 0; /* Supprime tous les paddings */
+    font-size: 1rem; /* Taille du texte */
+    line-height: normal;
+    font-family:'Guttman';
     text-align: right; /* Aligne le texte à droite */
+    /* border: blue 1px solid; */
 }
+
+
+
+
+
 
 
 
@@ -231,11 +249,11 @@ option[value="he"] {
 
 .nomParents {
     display: flex;
+    flex-direction: row; /* Alignement horizontal des noms des parents */
     justify-content: space-between; /* Garde chaque groupe de noms sur un côté de l'écran */
     align-items: flex-start; /* Alignement vertical en haut */
     width: 100%;
     max-width: 1200px; /* Limite la largeur totale de la section */
-    padding: 20px;
 }
 
 .Betito, .nahum {
@@ -247,6 +265,7 @@ option[value="he"] {
 
 .Betito {
     text-align: left; /* Alignement à gauche */
+    padding-left: 5%;
 }
 
 .nahum {
@@ -489,7 +508,7 @@ button:active {
 
     .houppa {
         background-size: cover; /* Remplit toute la zone, mais peut rogner un peu l'image */
-        background-position: center; /* Centre l'image */
+        background-position: top center; /* Centre l'image */
         /* padding: 20px; */
         /* gap: 1em; */
         text-align: center;
@@ -499,7 +518,7 @@ button:active {
     }
 
     .houppaPic {
-        width: auto; /* Prend toute la largeur */
+        width: 100%; /* Prend toute la largeur */
         margin: 0; /* Pas de marges */
         padding: 0; /* Pas de padding */
     }
@@ -531,11 +550,11 @@ button:active {
     }
 
     .tag .value {
-        font-size: 2em; /* Réduire la taille pour mobile */
+        font-size: 1.7em; /* Réduire la taille pour mobile */
     }
 
     .tag .label {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .btn {
@@ -543,10 +562,7 @@ button:active {
         font-size: 1.2rem; /* Taille plus petite pour les boutons */
     }
 
-    .bsd {
-        font-size: 1.2rem; /* Adapter la taille du texte */
-        margin: 5px;
-    }
+ 
 
     .noms {
         flex-direction: column;
@@ -621,10 +637,36 @@ button:active {
     .Betito, .nahum {
         font-size: 1rem; /* Taille ajustée pour mobile */
         width: 100%;
-        padding: 3%;
     }
 
     .nahum {
-        padding-left: 5%;
+        padding-left: 16%;
     }
+}
+
+
+@media (max-width: 425px){
+        /* Ajuster la taille du texte des noms des parents */
+        .Betito, .nahum {
+            font-size: 1rem; /* Taille ajustée pour mobile */
+            width: 100%;
+        }
+    
+        .nahum {
+            padding-left: 8%;
+        }
+}
+
+
+@media (max-width: 320px) {
+
+          /* Ajuster la taille du texte des noms des parents */
+        .Betito, .nahum {
+            font-size: 1rem; /* Taille ajustée pour mobile */
+            width: 100%;
+        }
+    
+        .nahum {
+            padding-left: 8%;
+        }
 }
