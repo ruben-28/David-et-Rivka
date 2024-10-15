@@ -399,7 +399,7 @@ input[type="text"], input[type="number"], textarea {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    color: #FFF;
+    color: #ffffff;
     font-size: 16px;
     animation: checkboxScale 0.3s ease forwards; /* Animation de l'icône cochée */
 }
