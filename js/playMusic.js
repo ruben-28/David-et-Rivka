@@ -7,4 +7,10 @@ function playMusic() {
     }).catch(error => {
         console.error("Audio play failed:", error);
     });
+
+    window.addEventListener('beforeunload', function (event) {
+        audio.pause();
+        audio.currentTime = 0;
+    });
+    
 }

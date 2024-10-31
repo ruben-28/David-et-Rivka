@@ -65,6 +65,7 @@ select {
     position: fixed;
     margin-top: 2%;
     margin-left: 2%;
+    z-index: 10000;
 }
 
 main {
