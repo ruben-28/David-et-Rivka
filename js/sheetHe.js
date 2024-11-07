@@ -25,7 +25,7 @@ document.getElementById('RSVPform').addEventListener('submit', function (event) 
     var data = {};
     formData.forEach((value, key) => data[key] = value);
 
-    fetch('https://script.google.com/macros/s/AKfycbwRIqlSDkFaatDrn3r5zUac4le2TGO1kOEuGjcG1RlNUjdHMwqTiiU7SXCiaHPw_dBv/exec', { // Remplacez par l'URL de déploiement du script Google Apps
+    fetch('Your link to your Google Sheet', { // Remplacez par l'URL de déploiement du script Google Apps
         method: 'POST',
         mode: 'no-cors',
         headers: {
